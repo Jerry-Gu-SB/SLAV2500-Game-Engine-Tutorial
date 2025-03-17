@@ -1,0 +1,136 @@
+[gd_scene load_steps=10 format=4 uid="uid://b2672pd67md1t"]
+
+[ext_resource type="Texture2D" uid="uid://daa7va6g5hv42" path="res://Industrial Tileset/5. Industrial Tileset - Starter Pack 32p/1_Industrial_Tileset_1.png" id="1_fx77k"]
+[ext_resource type="Texture2D" uid="uid://unmelrj1jak8" path="res://Industrial Tileset/5. Industrial Tileset - Starter Pack 32p/1_Industrial_Tileset_1B.png" id="2_escoq"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kxb0o"]
+texture = ExtResource("1_fx77k")
+8:4/size_in_atlas = Vector2i(2, 2)
+8:4/0 = 0
+10:4/size_in_atlas = Vector2i(2, 2)
+10:4/0 = 0
+10:6/size_in_atlas = Vector2i(2, 2)
+10:6/0 = 0
+8:6/size_in_atlas = Vector2i(2, 2)
+8:6/0 = 0
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/0 = 0
+2:0/size_in_atlas = Vector2i(2, 2)
+2:0/0 = 0
+4:0/size_in_atlas = Vector2i(2, 2)
+4:0/0 = 0
+6:0/size_in_atlas = Vector2i(2, 2)
+6:0/0 = 0
+6:2/size_in_atlas = Vector2i(2, 2)
+6:2/0 = 0
+6:4/size_in_atlas = Vector2i(2, 2)
+6:4/0 = 0
+6:6/size_in_atlas = Vector2i(2, 2)
+6:6/0 = 0
+0:2/size_in_atlas = Vector2i(2, 2)
+0:2/0 = 0
+2:2/size_in_atlas = Vector2i(2, 2)
+2:2/0 = 0
+4:2/size_in_atlas = Vector2i(2, 2)
+4:2/0 = 0
+4:4/size_in_atlas = Vector2i(2, 2)
+4:4/0 = 0
+0:4/size_in_atlas = Vector2i(2, 2)
+0:4/0 = 0
+0:6/size_in_atlas = Vector2i(2, 2)
+0:6/0 = 0
+2:6/size_in_atlas = Vector2i(2, 2)
+2:6/0 = 0
+4:6/size_in_atlas = Vector2i(2, 2)
+4:6/0 = 0
+8:0/size_in_atlas = Vector2i(2, 2)
+8:0/0 = 0
+10:0/size_in_atlas = Vector2i(2, 2)
+10:0/0 = 0
+8:2/size_in_atlas = Vector2i(2, 2)
+8:2/0 = 0
+10:2/size_in_atlas = Vector2i(2, 2)
+10:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ip0ia"]
+texture = ExtResource("2_escoq")
+8:0/size_in_atlas = Vector2i(4, 4)
+8:0/0 = 0
+8:4/size_in_atlas = Vector2i(2, 2)
+8:4/0 = 0
+8:6/size_in_atlas = Vector2i(2, 2)
+8:6/0 = 0
+10:4/size_in_atlas = Vector2i(2, 2)
+10:4/0 = 0
+10:6/size_in_atlas = Vector2i(2, 2)
+10:6/0 = 0
+6:2/size_in_atlas = Vector2i(2, 6)
+6:2/0 = 0
+0:0/size_in_atlas = Vector2i(2, 2)
+0:0/0 = 0
+2:0/size_in_atlas = Vector2i(2, 2)
+2:0/0 = 0
+4:0/size_in_atlas = Vector2i(2, 2)
+4:0/0 = 0
+6:0/size_in_atlas = Vector2i(2, 2)
+6:0/0 = 0
+0:2/size_in_atlas = Vector2i(2, 2)
+0:2/0 = 0
+2:2/size_in_atlas = Vector2i(2, 2)
+2:2/0 = 0
+4:2/size_in_atlas = Vector2i(2, 2)
+4:2/0 = 0
+4:4/size_in_atlas = Vector2i(2, 2)
+4:4/0 = 0
+0:4/size_in_atlas = Vector2i(2, 2)
+0:4/0 = 0
+0:6/size_in_atlas = Vector2i(2, 2)
+0:6/0 = 0
+2:6/size_in_atlas = Vector2i(2, 2)
+2:6/0 = 0
+4:6/size_in_atlas = Vector2i(2, 2)
+4:6/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_gbmeo"]
+sources/0 = SubResource("TileSetAtlasSource_kxb0o")
+sources/1 = SubResource("TileSetAtlasSource_ip0ia")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gxx7d"]
+size = Vector2(208, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikaub"]
+size = Vector2(128, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6assg"]
+size = Vector2(193, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_llyoj"]
+size = Vector2(32, 9)
+
+[node name="Level" type="StaticBody2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAACAA4AAAAAAAIAAAAEAA4AAAACAAIAAAAFAAkAAAAGAAAAAAAGAA4AAAACAAIAAAAIAA4AAAACAAIAAAAKAA4AAAACAAIAAAALAA4AAAACAAIAAAAMAAcAAAAGAAAAAAANAA4AAAACAAIAAAAPAAwAAAAAAAAAAAAPAA4AAAAAAAYAAAARAAwAAAACAAAAAAARAA4AAAACAAYAAAATAAwAAAACAAAAAAATAA4AAAACAAYAAAAVAAwAAAACAAIAAAAVAA4AAAAIAAIAAAAXAAoAAAAGAAIAAAAXAAwAAAAGAAQAAAAXAA4AAAACAAYAAAAYAAoAAAACAAAAAAAYAAwAAAAAAAQAAAAYAA4AAAACAAYAAAAZAAoAAAACAAIAAAAZAAsAAAAIAAAAAAAZAAwAAAAIAAQAAAAZAA4AAAACAAYAAAAaAAoAAAACAAAAAAAaAAwAAAAIAAAAAAAaAA0AAAAIAAIAAAAaAA4AAAACAAYAAAAbAAoAAAACAAAAAAAbAAwAAAAIAAQAAAAbAA4AAAACAAYAAAAcAAoAAAACAAAAAAAcAAsAAAAKAAAAAAAcAAwAAAAKAAQAAAAcAA0AAAAKAAIAAAAcAA4AAAACAAYAAAAdAAoAAAACAAIAAAAdAAwAAAAIAAQAAAAdAA4AAAACAAYAAAAeAAoAAAACAAAAAAAeAAwAAAAKAAQAAAAeAA4AAAACAAYAAAAfAAoAAAACAAAAAAAfAAwAAAAAAAQAAAAfAA4AAAACAAYAAAAgAAoAAAACAAAAAAAhAAoAAAACAAIAAAAhAAwAAAAEAAQAAAAhAA0AAAAEAAQAAAAhAA4AAAAEAAQAAAA=")
+tile_set = SubResource("TileSet_gbmeo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(128, 232)
+shape = SubResource("RectangleShape2D_gxx7d")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(296, 216)
+shape = SubResource("RectangleShape2D_ikaub")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(456.5, 200)
+shape = SubResource("RectangleShape2D_6assg")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(88, 140.5)
+shape = SubResource("RectangleShape2D_llyoj")
+one_way_collision = true
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(200, 108)
+shape = SubResource("RectangleShape2D_llyoj")
+one_way_collision = true

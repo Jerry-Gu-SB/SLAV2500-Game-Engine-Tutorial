@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://8pc1e11q820e"]
+
+[ext_resource type="PackedScene" uid="uid://43m3mkmpagfv" path="res://Scenes/character_body_2d.tscn" id="1_lfgss"]
+[ext_resource type="Script" path="res://Scenes/character_body_2d.gd" id="2_3sklx"]
+[ext_resource type="PackedScene" uid="uid://b2672pd67md1t" path="res://Scenes/level.tscn" id="2_yn547"]
+
+[node name="World" type="Node2D"]
+
+[node name="RoboCharacter" parent="." instance=ExtResource("1_lfgss")]
+position = Vector2(56, 194)
+script = ExtResource("2_3sklx")
+
+[node name="Level" parent="." instance=ExtResource("2_yn547")]

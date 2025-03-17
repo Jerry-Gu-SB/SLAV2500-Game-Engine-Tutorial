@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=3 uid="uid://43m3mkmpagfv"]
+
+[ext_resource type="Texture2D" uid="uid://cxg7tphh311ny" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Walk1_v1.1_frames/1.png" id="1_ijcd3"]
+[ext_resource type="Texture2D" uid="uid://cpssv3sxnv8vg" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Walk1_v1.1_frames/2.png" id="2_rd4li"]
+[ext_resource type="Texture2D" uid="uid://b5pu3t5he4rbt" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Walk1_v1.1_frames/3.png" id="3_w6q3h"]
+[ext_resource type="Texture2D" uid="uid://ck25uj1uxsu7s" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Walk1_v1.1_frames/4.png" id="4_hcpa0"]
+[ext_resource type="Texture2D" uid="uid://bmm0778qpj4yf" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Walk1_v1.1_frames/5.png" id="5_fl5ok"]
+[ext_resource type="Texture2D" uid="uid://cvmrrjh8tf1el" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Walk1_v1.1_frames/6.png" id="6_g2qol"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_so8a0"]
+size = Vector2(20, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4hnoc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ijcd3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rd4li")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_w6q3h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hcpa0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fl5ok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_g2qol")
+}],
+"loop": true,
+"name": &"robot_walk",
+"speed": 10.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_so8a0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4hnoc")
+animation = &"robot_walk"
+frame_progress = 0.618129
