@@ -100,48 +100,49 @@ sources/0 = SubResource("TileSetAtlasSource_kxb0o")
 sources/1 = SubResource("TileSetAtlasSource_ip0ia")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gxx7d"]
-size = Vector2(208, 32)
+size = Vector2(208, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikaub"]
-size = Vector2(128, 64)
+size = Vector2(128, 63)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6assg"]
-size = Vector2(193, 96)
+size = Vector2(193, 94)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_llyoj"]
 size = Vector2(32, 9)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cp8qu"]
-size = Vector2(64, 208)
+size = Vector2(64, 207)
 
 [node name="Level" type="StaticBody2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+texture_filter = 1
 tile_map_data = PackedByteArray("AAACAA4AAAAAAAIAAAAEAA4AAAACAAIAAAAFAAkAAAAGAAAAAAAGAA4AAAACAAIAAAAIAA4AAAACAAIAAAAKAA4AAAACAAIAAAALAA4AAAACAAIAAAAMAAcAAAAGAAAAAAANAA4AAAACAAIAAAAPAAwAAAAAAAAAAAAPAA4AAAAAAAYAAAARAAwAAAACAAAAAAARAA4AAAACAAYAAAATAAwAAAACAAAAAAATAA4AAAACAAYAAAAVAAwAAAACAAIAAAAVAA4AAAAIAAIAAAAXAAoAAAAGAAIAAAAXAAwAAAAGAAQAAAAXAA4AAAACAAYAAAAYAAoAAAACAAAAAAAYAAwAAAAAAAQAAAAYAA4AAAACAAYAAAAZAAoAAAACAAIAAAAZAAsAAAAIAAAAAAAZAAwAAAAIAAQAAAAZAA4AAAACAAYAAAAaAAoAAAACAAAAAAAaAAwAAAAIAAAAAAAaAA0AAAAIAAIAAAAaAA4AAAACAAYAAAAbAAoAAAACAAAAAAAbAAwAAAAIAAQAAAAbAA4AAAACAAYAAAAcAAoAAAACAAAAAAAcAAsAAAAKAAAAAAAcAAwAAAAKAAQAAAAcAA0AAAAKAAIAAAAcAA4AAAACAAYAAAAdAAoAAAACAAIAAAAdAAwAAAAIAAQAAAAdAA4AAAACAAYAAAAeAAoAAAACAAAAAAAeAAwAAAAKAAQAAAAeAA4AAAACAAYAAAAfAAoAAAACAAAAAAAfAAwAAAAAAAQAAAAfAA4AAAACAAYAAAAgAAoAAAACAAAAAAAhAAoAAAACAAIAAAAhAAwAAAAEAAQAAAAhAA0AAAAEAAQAAAAhAA4AAAAEAAQAAAAAAA4AAAAIAAAAAAAAAAwAAAAKAAAAAAAAAAoAAAAKAAYAAAAAAAgAAAAKAAIAAAAAAAYAAAAIAAAAAAAAAAMAAAAKAAAAAAAAAAUAAAAKAAIAAAD+/wgAAAAIAAYAAAD+/wUAAAAIAAYAAAD+/wYAAAAIAAAAAAD+/wMAAAAIAAAAAAD+/woAAAAKAAYAAAD+/wwAAAAKAAAAAAD+/w4AAAAKAAAAAAA=")
 tile_set = SubResource("TileSet_gbmeo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(128, 232)
+position = Vector2(128, 232.5)
 shape = SubResource("RectangleShape2D_gxx7d")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(296, 216)
+position = Vector2(296, 216.5)
 shape = SubResource("RectangleShape2D_ikaub")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(456.5, 200)
+position = Vector2(456.5, 201)
 shape = SubResource("RectangleShape2D_6assg")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
-position = Vector2(88, 140.5)
+position = Vector2(88, 142)
 shape = SubResource("RectangleShape2D_llyoj")
 one_way_collision = true
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
-position = Vector2(200, 108)
+position = Vector2(200, 110)
 shape = SubResource("RectangleShape2D_llyoj")
 one_way_collision = true
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
-position = Vector2(-8, 144)
+position = Vector2(-8, 144.5)
 shape = SubResource("RectangleShape2D_cp8qu")

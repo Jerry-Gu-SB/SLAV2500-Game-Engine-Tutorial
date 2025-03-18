@@ -1,155 +1,486 @@
-[gd_scene load_steps=29 format=3 uid="uid://43m3mkmpagfv"]
+[gd_scene load_steps=38 format=3 uid="uid://43m3mkmpagfv"]
 
-[ext_resource type="Texture2D" uid="uid://cxg7tphh311ny" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Walk1_v1.1_frames/1.png" id="1_ijcd3"]
-[ext_resource type="Texture2D" uid="uid://083yly6qlrem" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Jump1_v1.1_frames/1.png" id="1_lmr1n"]
-[ext_resource type="Texture2D" uid="uid://v4tkgycyb1qr" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Jump1_v1.1_frames/2.png" id="2_dt44q"]
-[ext_resource type="Texture2D" uid="uid://cpssv3sxnv8vg" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Walk1_v1.1_frames/2.png" id="2_rd4li"]
-[ext_resource type="Texture2D" uid="uid://d0tv735ivgagf" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Jump1_v1.1_frames/3.png" id="3_sqe0a"]
-[ext_resource type="Texture2D" uid="uid://b5pu3t5he4rbt" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Walk1_v1.1_frames/3.png" id="3_w6q3h"]
-[ext_resource type="Texture2D" uid="uid://b8ouhfxlbtdpe" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Jump1_v1.1_frames/4.png" id="4_bfinc"]
-[ext_resource type="Texture2D" uid="uid://ck25uj1uxsu7s" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Walk1_v1.1_frames/4.png" id="4_hcpa0"]
-[ext_resource type="Texture2D" uid="uid://bmm0778qpj4yf" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Walk1_v1.1_frames/5.png" id="5_fl5ok"]
-[ext_resource type="Texture2D" uid="uid://dxava8jajy618" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Jump1_v1.1_frames/5.png" id="5_sjcrt"]
-[ext_resource type="Texture2D" uid="uid://bocijwbaawgwl" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Jump1_v1.1_frames/6.png" id="6_148on"]
-[ext_resource type="Texture2D" uid="uid://cvmrrjh8tf1el" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Walk1_v1.1_frames/6.png" id="6_g2qol"]
-[ext_resource type="Texture2D" uid="uid://d3libo7pwvgp3" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Jump1_v1.1_frames/7.png" id="7_cdvqb"]
-[ext_resource type="Texture2D" uid="uid://bk4tuqp62573a" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Jump1_v1.1_frames/8.png" id="8_o75gf"]
+[ext_resource type="Texture2D" uid="uid://083yly6qlrem" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Jump1_v1.1_frames/1.png" id="1_j36h3"]
+[ext_resource type="Texture2D" uid="uid://c1n83no71mqty" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Walk1_v1.1_spritesheet.png" id="1_srfpl"]
+[ext_resource type="Texture2D" uid="uid://dkjntky2hj71n" path="res://Industrial Tileset/6. Character Animations 32p/Anim_Robot_Jump1_v1.1_spritesheet.png" id="1_tid8a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_so8a0"]
 size = Vector2(21, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_4hnoc"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_sjcrt")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_148on")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_cdvqb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_o75gf")
-}],
-"loop": true,
-"name": &"robot_fall",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_lmr1n")
-}],
-"loop": true,
-"name": &"robot_idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_lmr1n")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_dt44q")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_sqe0a")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_bfinc")
-}],
-"loop": true,
-"name": &"robot_jump",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_ijcd3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_rd4li")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_w6q3h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_hcpa0")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_fl5ok")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_g2qol")
-}],
-"loop": true,
-"name": &"robot_walk",
-"speed": 10.0
-}]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_q7u6p"]
+animation = &"robot_fall"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_r883n"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_j6irh"]
+animation = &"robot_fall"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_4cfty"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0hcso"]
+animation = &"robot_fall"
 
-[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_61gwv"]
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_2e50d"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_q7u6p")
+blend_point_0/pos = Vector2(0, -0.9)
+blend_point_1/node = SubResource("AnimationNodeAnimation_j6irh")
+blend_point_1/pos = Vector2(-1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_0hcso")
+blend_point_2/pos = Vector2(1, 0)
+blend_mode = 1
 
-[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_j72s6"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v6hos"]
+animation = &"robot_idle"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pkb73"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hx1fl"]
+animation = &"robot_idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_f3p70"]
+animation = &"robot_idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_k01rn"]
+animation = &"robot_idle"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_8i80h"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_v6hos")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_hx1fl")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_f3p70")
+blend_point_2/pos = Vector2(0, 0.1)
+blend_point_3/node = SubResource("AnimationNodeAnimation_k01rn")
+blend_point_3/pos = Vector2(0, -0.1)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_au4xw"]
+animation = &"robot_jump"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_x3b6q"]
+animation = &"robot_jump"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_prnf7"]
+animation = &"robot_jump"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_hwly6"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_au4xw")
+blend_point_0/pos = Vector2(0, 1)
+blend_point_1/node = SubResource("AnimationNodeAnimation_x3b6q")
+blend_point_1/pos = Vector2(-1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_prnf7")
+blend_point_2/pos = Vector2(1, 0)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_k5ycc"]
+animation = &"robot_walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_akub6"]
+animation = &"robot_walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rc61b"]
+animation = &"robot_walk"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gbgml"]
+animation = &"robot_walk"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_1rha4"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_k5ycc")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_akub6")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_2/node = SubResource("AnimationNodeAnimation_rc61b")
+blend_point_2/pos = Vector2(0, 0.4)
+blend_point_3/node = SubResource("AnimationNodeAnimation_gbgml")
+blend_point_3/pos = Vector2(0, -0.4)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jrpjc"]
 advance_mode = 2
-advance_condition = &"if velocity.x == 0 & is_on_floor()"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6io6s"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_x6jlj"]
 advance_mode = 2
+advance_condition = &"is_walking"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kpwbv"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fqjht"]
 advance_mode = 2
-advance_condition = &"on_floor"
+advance_condition = &"is_idle"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0l0eu"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5cmdb"]
+advance_mode = 2
+advance_condition = &"is_jumping"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_uim2j"]
+switch_mode = 2
 advance_mode = 2
 advance_condition = &"is_falling"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_d58m5"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nys1v"]
 advance_mode = 2
+advance_condition = &"is_jumping"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_caxov"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lltyq"]
 advance_mode = 2
-advance_condition = &"on_floor"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wqtcd"]
-advance_condition = &"on_floor"
+advance_condition = &"is_idle"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_r6214"]
-states/Start/position = Vector2(154, 180)
-states/robot_fall/node = SubResource("AnimationNodeBlendSpace2D_r883n")
-states/robot_fall/position = Vector2(585, 27)
-states/robot_idle/node = SubResource("AnimationNodeBlendSpace2D_4cfty")
-states/robot_idle/position = Vector2(352, 180)
-states/robot_jump/node = SubResource("AnimationNodeBlendSpace2D_61gwv")
-states/robot_jump/position = Vector2(352, 27)
-states/robot_walk/node = SubResource("AnimationNodeBlendSpace2D_j72s6")
-states/robot_walk/position = Vector2(585, 180)
-transitions = ["Start", "robot_idle", SubResource("AnimationNodeStateMachineTransition_pkb73"), "robot_idle", "robot_walk", SubResource("AnimationNodeStateMachineTransition_6io6s"), "robot_idle", "robot_jump", SubResource("AnimationNodeStateMachineTransition_kpwbv"), "robot_jump", "robot_fall", SubResource("AnimationNodeStateMachineTransition_0l0eu"), "robot_walk", "robot_idle", SubResource("AnimationNodeStateMachineTransition_d58m5"), "robot_walk", "robot_jump", SubResource("AnimationNodeStateMachineTransition_caxov"), "robot_fall", "robot_idle", SubResource("AnimationNodeStateMachineTransition_wqtcd")]
+states/Start/position = Vector2(179, 139)
+states/robot_fall/node = SubResource("AnimationNodeBlendSpace2D_2e50d")
+states/robot_fall/position = Vector2(608, 49)
+states/robot_idle/node = SubResource("AnimationNodeBlendSpace2D_8i80h")
+states/robot_idle/position = Vector2(370, 139)
+states/robot_jump/node = SubResource("AnimationNodeBlendSpace2D_hwly6")
+states/robot_jump/position = Vector2(370, 44)
+states/robot_walk/node = SubResource("AnimationNodeBlendSpace2D_1rha4")
+states/robot_walk/position = Vector2(755, 139)
+transitions = ["Start", "robot_idle", SubResource("AnimationNodeStateMachineTransition_jrpjc"), "robot_idle", "robot_walk", SubResource("AnimationNodeStateMachineTransition_x6jlj"), "robot_walk", "robot_idle", SubResource("AnimationNodeStateMachineTransition_fqjht"), "robot_idle", "robot_jump", SubResource("AnimationNodeStateMachineTransition_5cmdb"), "robot_jump", "robot_fall", SubResource("AnimationNodeStateMachineTransition_uim2j"), "robot_walk", "robot_jump", SubResource("AnimationNodeStateMachineTransition_nys1v"), "robot_fall", "robot_idle", SubResource("AnimationNodeStateMachineTransition_lltyq")]
+graph_offset = Vector2(-8, -63)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[sub_resource type="Animation" id="Animation_0tcoo"]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_j36h3")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_3c7tw"]
+resource_name = "robot_fall"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_tid8a")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_pgy5y"]
+resource_name = "robot_idle"
+length = 0.5
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_tid8a")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_jd14n"]
+resource_name = "robot_jump"
+length = 0.15
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_tid8a")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_3ovva"]
+resource_name = "robot_land"
+length = 0.3
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_tid8a")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [7, 8, 8]
+}
+
+[sub_resource type="Animation" id="Animation_xseov"]
+resource_name = "robot_walk"
+length = 0.45
+loop_mode = 1
+step = 0.075
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_srfpl")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.0769231, 0.153846, 0.230769, 0.307692, 0.384615),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xsn15"]
+_data = {
+"RESET": SubResource("Animation_0tcoo"),
+"robot_fall": SubResource("Animation_3c7tw"),
+"robot_idle": SubResource("Animation_pgy5y"),
+"robot_jump": SubResource("Animation_jd14n"),
+"robot_land": SubResource("Animation_3ovva"),
+"robot_walk": SubResource("Animation_xseov")
+}
+
+[node name="RoboCharacter" type="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, 0)
 shape = SubResource("RectangleShape2D_so8a0")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_4hnoc")
-animation = &"robot_fall"
-
 [node name="AnimationTree" type="AnimationTree" parent="."]
+process_mode = 3
 tree_root = SubResource("AnimationNodeStateMachine_r6214")
 anim_player = NodePath("../AnimationPlayer")
-"parameters/conditions/if velocity.x == 0 & is_on_floor()" = false
 parameters/conditions/is_falling = false
-parameters/conditions/on_floor = false
+parameters/conditions/is_idle = false
+parameters/conditions/is_jumping = false
+parameters/conditions/is_walking = false
 parameters/robot_fall/blend_position = Vector2(0, 0)
-parameters/robot_idle/blend_position = Vector2(0, 0)
+parameters/robot_idle/blend_position = Vector2(0, 0.0253807)
 parameters/robot_jump/blend_position = Vector2(0, 0)
 parameters/robot_walk/blend_position = Vector2(0, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xsn15")
+}
+autoplay = "robot_idle"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_j36h3")
