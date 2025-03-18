@@ -11,7 +11,7 @@ var landing = false
 func _ready():
 	animation_tree.active = true
 
-func _process(delta):
+func _process(_delta):
 	update_animation_parameters()
 
 func _physics_process(delta: float) -> void:

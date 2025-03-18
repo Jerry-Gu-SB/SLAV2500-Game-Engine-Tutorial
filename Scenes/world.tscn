@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://8pc1e11q820e"]
+[gd_scene load_steps=5 format=3 uid="uid://8pc1e11q820e"]
 
 [ext_resource type="PackedScene" uid="uid://43m3mkmpagfv" path="res://Scenes/character_body_2d.tscn" id="1_lfgss"]
 [ext_resource type="Script" path="res://Scripts/character_body_2d.gd" id="2_3sklx"]
 [ext_resource type="PackedScene" uid="uid://b2672pd67md1t" path="res://Scenes/level.tscn" id="2_yn547"]
+[ext_resource type="PackedScene" uid="uid://mvd403xdoxxe" path="res://Scenes/coin.tscn" id="4_l82mv"]
 
 [node name="World" type="Node2D"]
 
@@ -16,3 +17,6 @@ script = ExtResource("2_3sklx")
 position = Vector2(0, -92)
 offset = Vector2(0, 13.205)
 zoom = Vector2(1.83, 1.83)
+
+[node name="Coin" parent="." instance=ExtResource("4_l82mv")]
+position = Vector2(82, -25)
