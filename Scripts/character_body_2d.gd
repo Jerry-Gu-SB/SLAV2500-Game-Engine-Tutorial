@@ -7,6 +7,7 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 var landing = false
+var score = 0
 
 func _ready():
 	animation_tree.active = true

@@ -14,3 +14,7 @@ config/name="SLAV2500-Game-Engine-Tutorial"
 run/main_scene="res://Scenes/world.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[global_group]
+
+player=""

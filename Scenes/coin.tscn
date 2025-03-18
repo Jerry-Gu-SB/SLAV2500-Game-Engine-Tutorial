@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://mvd403xdoxxe"]
+[gd_scene load_steps=17 format=3 uid="uid://mvd403xdoxxe"]
 
 [ext_resource type="Texture2D" uid="uid://bk78s5klygpin" path="res://brackeys_platformer_assets/sprites/coin.png" id="1_a32pa"]
 [ext_resource type="Script" path="res://Scripts/coin.gd" id="1_jvtiv"]
@@ -95,11 +95,19 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Coin" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tm46j"]
+size = Vector2(10, 10)
+
+[node name="Coin" type="Area2D"]
 script = ExtResource("1_jvtiv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_870e5")
 animation = &"coin"
-frame_progress = 0.477602
+frame_progress = 0.394926
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_tm46j")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
