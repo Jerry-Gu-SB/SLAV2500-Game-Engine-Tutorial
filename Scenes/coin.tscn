@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://mvd403xdoxxe"]
+[gd_scene load_steps=18 format=3 uid="uid://mvd403xdoxxe"]
 
 [ext_resource type="Texture2D" uid="uid://bk78s5klygpin" path="res://brackeys_platformer_assets/sprites/coin.png" id="1_a32pa"]
 [ext_resource type="Script" path="res://Scripts/coin.gd" id="1_jvtiv"]
+[ext_resource type="AudioStream" uid="uid://b2k5qda7p3njg" path="res://brackeys_platformer_assets/sounds/coin.wav" id="3_ew085"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2hg2x"]
 atlas = ExtResource("1_a32pa")
@@ -109,5 +110,8 @@ frame_progress = 0.394926
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_tm46j")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ew085")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
