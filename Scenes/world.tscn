@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://8pc1e11q820e"]
+[gd_scene load_steps=7 format=3 uid="uid://8pc1e11q820e"]
 
+[ext_resource type="AudioStream" uid="uid://rlv05ies18t" path="res://brackeys_platformer_assets/music/time_for_adventure.mp3" id="1_k0ljv"]
 [ext_resource type="PackedScene" uid="uid://43m3mkmpagfv" path="res://Scenes/character_body_2d.tscn" id="1_lfgss"]
 [ext_resource type="Script" path="res://Scripts/character_body_2d.gd" id="2_3sklx"]
 [ext_resource type="PackedScene" uid="uid://b2672pd67md1t" path="res://Scenes/level.tscn" id="2_yn547"]
@@ -8,14 +9,23 @@
 
 [node name="World" type="Node2D"]
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_k0ljv")
+autoplay = true
+parameters/looping = true
+
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="ScoreLabel" type="Label" parent="HUD"]
-offset_right = 102.0
-offset_bottom = 23.0
+offset_left = 129.0
+offset_top = -40.0
+offset_right = 231.0
+offset_bottom = -17.0
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("5_1qvxy")
 text = "Score: 1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Level" parent="." instance=ExtResource("2_yn547")]
 
