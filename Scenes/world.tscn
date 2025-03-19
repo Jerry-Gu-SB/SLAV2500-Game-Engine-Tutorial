@@ -1,11 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://8pc1e11q820e"]
+[gd_scene load_steps=6 format=3 uid="uid://8pc1e11q820e"]
 
 [ext_resource type="PackedScene" uid="uid://43m3mkmpagfv" path="res://Scenes/character_body_2d.tscn" id="1_lfgss"]
 [ext_resource type="Script" path="res://Scripts/character_body_2d.gd" id="2_3sklx"]
 [ext_resource type="PackedScene" uid="uid://b2672pd67md1t" path="res://Scenes/level.tscn" id="2_yn547"]
 [ext_resource type="PackedScene" uid="uid://mvd403xdoxxe" path="res://Scenes/coin.tscn" id="4_l82mv"]
+[ext_resource type="FontFile" uid="uid://c0mbykgtudtpi" path="res://brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="5_1qvxy"]
 
 [node name="World" type="Node2D"]
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="HUD"]
+offset_right = 102.0
+offset_bottom = 23.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("5_1qvxy")
+text = "Score: 1"
 
 [node name="Level" parent="." instance=ExtResource("2_yn547")]
 
@@ -18,5 +28,109 @@ position = Vector2(0, -92)
 offset = Vector2(0, 13.205)
 zoom = Vector2(1.83, 1.83)
 
-[node name="Coin" parent="." instance=ExtResource("4_l82mv")]
-position = Vector2(82, 200)
+[node name="coins" type="Node2D" parent="."]
+
+[node name="Coin" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(88, 178)
+
+[node name="Coin2" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(87, 122)
+
+[node name="Coin33" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(139, 108)
+
+[node name="Coin34" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(141, 23)
+
+[node name="Coin35" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(131, -67)
+
+[node name="Coin3" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(200, 92)
+
+[node name="Coin4" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(89, 48)
+
+[node name="Coin5" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(200, 13)
+
+[node name="Coin6" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(88, -49)
+
+[node name="Coin7" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(182, -97)
+
+[node name="Coin8" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(185, -143)
+
+[node name="Coin9" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(113, -135)
+
+[node name="Coin10" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(40, -147)
+
+[node name="Coin11" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(184, -195)
+
+[node name="Coin32" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(175, -231)
+
+[node name="Coin12" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(57, -224)
+
+[node name="Coin13" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(40, -273)
+
+[node name="Coin14" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(117, -260)
+
+[node name="Coin31" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(68, -322)
+
+[node name="Coin15" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(215, -289)
+
+[node name="Coin16" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(168, -338)
+
+[node name="Coin17" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(168, -382)
+
+[node name="Coin30" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(214, -361)
+
+[node name="Coin18" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(168, -434)
+
+[node name="Coin19" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(39, -417)
+
+[node name="Coin20" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(214, -466)
+
+[node name="Coin21" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(86, -483)
+
+[node name="Coin22" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(40, -512)
+
+[node name="Coin23" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(40, -565)
+
+[node name="Coin24" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(107, -553)
+
+[node name="Coin25" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(183, -548)
+
+[node name="Coin26" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(217, -593)
+
+[node name="Coin27" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(87, -624)
+
+[node name="Coin28" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(155, -606)
+
+[node name="Coin29" parent="coins" instance=ExtResource("4_l82mv")]
+position = Vector2(96, -377)
