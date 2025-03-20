@@ -1,26 +1,24 @@
-[gd_scene load_steps=7 format=3 uid="uid://8pc1e11q820e"]
+[gd_scene load_steps=8 format=3 uid="uid://8pc1e11q820e"]
 
 [ext_resource type="AudioStream" uid="uid://rlv05ies18t" path="res://brackeys_platformer_assets/music/time_for_adventure.mp3" id="1_k0ljv"]
 [ext_resource type="PackedScene" uid="uid://43m3mkmpagfv" path="res://Scenes/character_body_2d.tscn" id="1_lfgss"]
+[ext_resource type="Script" path="res://Scripts/hud.gd" id="1_rgvut"]
 [ext_resource type="Script" path="res://Scripts/character_body_2d.gd" id="2_3sklx"]
 [ext_resource type="PackedScene" uid="uid://b2672pd67md1t" path="res://Scenes/level.tscn" id="2_yn547"]
 [ext_resource type="PackedScene" uid="uid://mvd403xdoxxe" path="res://Scenes/coin.tscn" id="4_l82mv"]
 [ext_resource type="FontFile" uid="uid://c0mbykgtudtpi" path="res://brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="5_1qvxy"]
 
 [node name="World" type="Node2D"]
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_k0ljv")
-autoplay = true
-parameters/looping = true
+position = Vector2(471, 356)
 
 [node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("1_rgvut")
 
 [node name="ScoreLabel" type="Label" parent="HUD"]
-offset_left = 129.0
-offset_top = -40.0
-offset_right = 231.0
-offset_bottom = -17.0
+offset_left = 1009.0
+offset_top = 20.0
+offset_right = 1111.0
+offset_bottom = 43.0
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("5_1qvxy")
 text = "Score: 1"
@@ -144,3 +142,8 @@ position = Vector2(155, -606)
 
 [node name="Coin29" parent="coins" instance=ExtResource("4_l82mv")]
 position = Vector2(96, -377)
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_k0ljv")
+autoplay = true
+parameters/looping = true
